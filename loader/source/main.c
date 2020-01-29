@@ -704,7 +704,7 @@ int main(int argc, char **argv)
 	//Set some important kernel regs
 	*(vu32*)0x92FFFFC0 = isWiiVC; //cant be detected in IOS
 	if(WiiDRC_Connected()) //used in PADReadGC.c
-		*(vu32*)0x92FFFFC4 = (u32)WiiDRC_GetRawI2CAddr();
+		*(vu32*)0x92FFFFC4 = 0;
 	else //will disable gamepad spot for player 1
 		*(vu32*)0x92FFFFC4 = 0;
 	DCFlushRange((void*)0x92FFFFC0,0x20);
