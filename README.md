@@ -50,3 +50,16 @@ This works by disabling the assignment of the WiiU as a controller for any playe
 * The Wii and Wii U SD card slot is known to be slow. If you're using an SD card and are having performance issues, consider either using a USB SD reader or a USB hard drive.
 * USB flash drives are known to be problematic.
 * Nintendont runs best with storage devices formatted with 32 KB clusters. (Use either FAT32 or exFAT.)
+
+### Building Nintendont from Source on Windows
+* Install devkitPro from their GitHub https://github.com/devkitPro/installer/releases/tag/v3.0.3
+* Run msys2_shell.bat from /devkitPro/msys2/ to get a shell window
+* Set paths with the following commands. Note the syntax (/drive/folder/). Your paths may differ, below are defaults.
+```
+  export PATH=$PATH:/c/devkitPro/devkitPPC/bin
+  export DEVKITPPC=/c/devkitPro/devkitPPC/
+  export DEVKITARM=/c/devkitPro/devkitARM/
+```  
+* Navigate to your Nintendont repository and excecute the following command to build Nintendont
+
+```windows=1 ./build.sh```
