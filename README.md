@@ -1,5 +1,11 @@
-### Nintendont
+### Nintendont - Without forcing the WiiU gamepad to Player 1 inputs
 A Wii Homebrew Project to play GC Games on Wii and vWii on Wii U
+
+This is a small hack that disables player 1 being foribly assigned to the WiiU gamepad when Nintendont is launched with a forwarder from the WiiU menu and the "Use gamepad" option is selected. 
+
+This is useful for WiiU users only. It allows you to use the WiiU gamepad to launch a Nintendont forwarder from the WiiU system menu, and then swap to a compatible HID controller (eg: gamecube controller with adapter) once inside Nintendont. By default, selecting the "Use gamepad" option when launching the forwarder would force Player 1 to get assigned to the WiiU gamepad. You could work around this by selecting "Don't use gamepad" when launching the forwarder, but that would prompt the user to point a Wiimote at the screen.
+
+This works by disabling the assignment of the WiiU as a controller for any player. The gamepad will continue to display the game, but will not accpept any inputs. You can turn off the display on the gamepad by holding the power button down for about 5 seconds. When you want to power off the WiiU, you must use the power button on the console, since the shutdown command from the power button on the gamepad will also be disabled.
 
 ### Features:
 * Works on Wii and Wii U (in vWii mode)
